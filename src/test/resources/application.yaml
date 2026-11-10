@@ -1,0 +1,16 @@
+# Configuracion SOLO para pruebas: base H2 en memoria y una clave JWT de prueba.
+# Asi `mvn test` funciona sin MySQL ni variables de entorno.
+spring:
+  datasource:
+    url: jdbc:h2:mem:techstore_test
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+
+app:
+  jwt:
+    secret: dGVzdC1vbmx5LWtleS1kby1ub3QtdXNlLWluLXByb2R1Y3Rpb24tMDEyMzQ1Njc4OQ==
+    expiracion-ms: 3600000

@@ -1,0 +1,14 @@
+package cl.duoc.techstore.techstore_backend.dto;
+
+import java.time.LocalDateTime;
+import java.util.Map;
+
+public record ErrorResponse (
+        LocalDateTime timestamp,
+        int status,
+        String error,
+        String mensaje,
+        String ruta,
+        Map<String, String> detalles
+) {
+}
