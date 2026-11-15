@@ -14,3 +14,5 @@ app:
   jwt:
     secret: dGVzdC1vbmx5LWtleS1kby1ub3QtdXNlLWluLXByb2R1Y3Rpb24tMDEyMzQ1Njc4OQ==
     expiracion-ms: 3600000
+  cors:
+    origenes: http://localhost:5173
