@@ -44,6 +44,12 @@ public class AuthService {
         return construirRespuesta(usuario);
     }
 
+    public AuthResponse refrescar(String email) {
+        Usuario usuario = usuarioRepository.findByEmail(email)
+                .orElseThrow(() -> new CredencialesInvalidasException("Usuario no encontrado"));
+        return construirRespuesta(usuario);
+    }
+
     private AuthResponse construirRespuesta(Usuario usuario) {
         return new AuthResponse(jwtService.generarToken(usuario),
                 usuario.getNombre(), usuario.getEmail(), usuario.getRol().name());

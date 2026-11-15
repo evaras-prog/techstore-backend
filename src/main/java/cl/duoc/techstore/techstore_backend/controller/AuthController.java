@@ -23,12 +23,19 @@ public class AuthController {
     @PostMapping("/registro")
     @ResponseStatus(HttpStatus.CREATED)
     public AuthResponse registro(@Valid @RequestBody RegistroRequest datos) {
+
         return authService.registrar(datos);
     }
 
     @PostMapping("/login")
     public AuthResponse login(@Valid @RequestBody LoginRequest datos) {
+
         return authService.login(datos);
+    }
+
+    @PostMapping("/refresh")
+    public AuthResponse refresh(Authentication autenticacion) {
+        return authService.refrescar(autenticacion.getName());
     }
 
     @GetMapping("/yo")
