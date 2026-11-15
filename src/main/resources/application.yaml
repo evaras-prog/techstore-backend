@@ -15,3 +15,5 @@ app:
   jwt:
     secret: ${JWT_SECRET}
     expiracion-ms: ${JWT_EXPIRACION_MS:3600000}
+  cors:
+    origenes: ${CORS_ORIGENES:http://localhost:5173}
