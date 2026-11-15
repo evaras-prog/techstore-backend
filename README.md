@@ -48,6 +48,7 @@ La aplicación **no guarda secretos en el código**: los lee desde variables de 
 | `DB_USERNAME` | No | Usuario de MySQL | `root` |
 | `DB_URL` | No | URL JDBC | `jdbc:mysql://localhost:3306/techstore?...` |
 | `JWT_EXPIRACION_MS` | No | Duración del token en milisegundos | `3600000` (1 hora) |
+| `CORS_ORIGENES` | No | Orígenes del frontend autorizados por CORS, separados por coma | `http://localhost:5173` |
 
 Para generar una clave JWT aleatoria (PowerShell):
 
